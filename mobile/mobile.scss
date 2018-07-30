@@ -1,0 +1,429 @@
+@import 'common/foundation/variables';
+// -------------------------
+// Colors
+// -------------------------
+$white: #fff;
+$black: #333;
+$red: #a22;
+
+$text-primary: #0e1554;
+$text-secondary: #3a4476;
+$text-light: #6a7299;
+$text-lighter: #9da1c3;
+
+$blue-xdark: #0a0f37;
+$blue-dark: #0e1554;
+$blue-sdark: #2c40bb;
+$blue: #445ae3;
+$blue-slight: #2a90cc;
+$blue-light: #51befe;
+$blue-xlight: #4eb7f5;
+$blue-xxlight: #d8f8ff;
+
+$purple: #545efc;
+$purple-light: #767efd;
+$purple-xlight: #dde2ff;
+$purple-xxlight: #f5f4fe;
+
+$pink-dark: #de266d;
+$pink: #fe3c87;
+$pink-light: #ff3c87;
+$pink-xlight: #ffe4ee;
+
+$green-dark: #36c7a6;
+$green: #33e2bb;
+$green-xlight: #d6fff6;
+
+$yellow-dark: #ddac3e;
+$yellow: #fad566;
+$yellow-light: #fff4d5;
+
+$grey-dark: #999999;
+$grey: #e8e8e8;
+
+$base-background: $white;
+$base-font-color: $blue-dark;
+$base-error-color: $pink;
+
+body,
+html {
+  font-size: 14px;
+}
+
+.cooked,
+.d-editor-preview {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+/*
+  Header
+ */
+.d-header {
+  #site-logo {
+    position: relative;
+    max-height: 20px;
+    top: 0;
+  }
+
+  .d-header-icons .icon {
+    width: 1.5em;
+    height: 1.5em;
+    margin: 5px 6px !important;
+  }
+}
+/*
+  Alert
+ */
+.alert.alert-info {
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 16px;
+  line-height: 1.5em;
+  background: none;
+  color: $text-lighter;
+
+  a {
+    color: inherit;
+  }
+}
+
+ol.category-breadcrumb {
+  margin-bottom: 8px;
+  margin-right: 24px;
+
+  li {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+}
+
+.list-controls .category-breadcrumb a.badge-category {
+  padding: 10px 20px;
+
+  &.category-dropdown-button {
+    padding: 10px 20px 10px 0;
+    margin-left: -10px;
+  }
+}
+
+.nav-pills {
+  > li > a {
+    padding: 10px;
+    margin-left: -10px;
+    border-radius: 2em;
+    border-width: 0;
+    overflow: hidden;
+
+    &:hover {
+      background-color: $purple-fade;
+      color: $purple;
+    }
+  }
+
+  > li > a.active,
+  > li.active > a {
+    background-color: $purple-fade;
+    color: $purple;
+    font-weight: 500;
+  }
+}
+
+.list-controls
+  .category-breadcrumb
+  a.badge-category.category-dropdown-button:hover
+  .fa-caret-right {
+  color: $black;
+}
+
+.category .main-link > h3 > a {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.category-logo {
+  max-height: 40px;
+  margin-right: 0.5rem;
+}
+
+.categories-list .category-list th {
+  padding: 0;
+}
+
+td.category > div {
+  border-left: 4px solid transparent;
+  padding-left: 16px;
+  border-bottom-width: 0;
+}
+
+td.category .category-name,
+td.category a {
+  color: inherit !important;
+}
+
+.topic-list {
+  a.title {
+    font-weight: 400 !important;
+    color: $black !important;
+  }
+
+  td {
+    padding: 12px 0;
+
+    .fa-check-square-o {
+      color: $green-xlight;
+    }
+  }
+
+  td,
+  th {
+    line-height: 1.43em;
+    color: $text-lighter;
+  }
+
+  &.categories {
+    td.category,
+    td.latest {
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
+    }
+
+    .featured-topic {
+      margin: 0;
+    }
+
+    td.category {
+      padding-left: 0 !important;
+      position: relative;
+      left: -10px;
+    }
+  }
+}
+
+.wrap .docked .d-header {
+  opacity: 0.9;
+}
+
+.fa-bars,
+.fa-search {
+  color: $black;
+}
+
+.fa-bars:hover,
+.fa-search:hover {
+  background-color: transparent !important;
+  color: $purple;
+}
+
+.header-dropdown-toggle a:hover {
+  background-color: transparent !important;
+}
+
+.header-dropdown-toggle a {
+  margin: 0 8px !important;
+}
+
+.header-dropdown-toggle.active i {
+  color: $purple;
+}
+
+#create-topic {
+  background-color: $white;
+  color: $purple;
+  border-color: $purple;
+  border-style: solid;
+  border-radius: 2em;
+  border-width: 1px;
+
+  &:hover {
+    color: $white;
+    background-color: $purple;
+    border-style: none;
+
+    i {
+      color: $white;
+    }
+  }
+}
+
+.extra-info {
+  color: $white;
+}
+
+.extra-info-wrapper .topic-link {
+  color: $black;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.extra-info-wrapper .badge-wrapper.bullet span.badge-category {
+  color: $white !important;
+}
+
+#topic-footer-buttons .btn {
+  border-radius: 2em;
+  border-width: 0;
+}
+
+.fa-plus {
+  color: $purple;
+}
+
+.fa-reply {
+  color: #fff;
+}
+
+nav.post-controls {
+  button.has-like .fa-heart {
+    color: $pink;
+  }
+
+  .fa-check-square {
+    color: $green;
+  }
+
+  .fa-check-square-o {
+    color: $green-xlight;
+  }
+
+  button i {
+    color: $black;
+  }
+}
+
+dd,
+ol,
+ul {
+  margin: 0 0 9px;
+  padding: 0;
+}
+
+.badge-wrapper.box {
+  text-decoration: none !important;
+
+  span.badge-category {
+    padding: 2px 8px;
+    margin: 0;
+  }
+
+  span.badge-category-bg {
+    border-radius: 2px;
+  }
+}
+
+#topic-progress-wrapper {
+  display: none;
+}
+
+.category-dropdown-menu {
+  .badge-wrapper.box span.badge-category-bg {
+    border-radius: 0 !important;
+  }
+
+  .cat:first-of-type {
+    display: none;
+  }
+}
+
+.badge-category.home {
+  text-transform: capitalize;
+}
+
+h3 a {
+  text-decoration: underline;
+}
+
+.main-link a {
+  text-decoration: none;
+}
+
+.widget-button {
+  color: $black !important;
+  transition: background-color 0.2s, color 0.2s;
+  border-radius: 18px !important;
+
+  .fa {
+    color: inherit !important;
+  }
+
+  .widget-button:hover {
+    background-color: $purple !important;
+    color: $white !important;
+  }
+}
+
+.btn-primary.widget-button {
+  color: $white !important;
+}
+
+.btn {
+  .fa {
+    color: inherit;
+  }
+
+  &:hover {
+    background: $purple;
+  }
+}
+
+.btn-primary {
+  background: $purple;
+}
+
+.btn-small {
+  border-radius: 2em;
+}
+
+#main-outlet .body-page .btn {
+  border-radius: 15px;
+}
+
+.category-list-item.category {
+  box-sizing: border-box;
+  margin: 16px 0;
+}
+
+.category-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+
+  img {
+    height: 40px;
+    width: 40px;
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+
+  p {
+    font-size: 16px;
+    margin: 0;
+    max-width: 36em;
+  }
+}
+
+.category-name {
+  font-size: 1.1rem;
+}
+
+#suggested-topics .category-name {
+  margin-top: 2px;
+}
+
+.names span {
+  font-size: 1.3em;
+}
+
+.list-controls .nav-pills {
+  margin: 0 3px;
+
+  li {
+    background: none;
+  }
+}
+
+.subcategories-list {
+  display: none;
+}

@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,600i');
+@import 'common/foundation/variables';
+
+// -------------------------
+// Colors
+// -------------------------
+$white: #fff;
+$black: #333;
+$red: #a22;
+
+$text-primary: #0e1554;
+$text-secondary: #3a4476;
+$text-light: #6a7299;
+$text-lighter: #9da1c3;
+
+$blue-xdark: #0a0f37;
+$blue-dark: #0e1554;
+$blue-sdark: #2c40bb;
+$blue: #445ae3;
+$blue-slight: #2a90cc;
+$blue-light: #51befe;
+$blue-xlight: #4eb7f5;
+$blue-xxlight: #d8f8ff;
+
+$purple: #545efc;
+$purple-light: #767efd;
+$purple-xlight: #dde2ff;
+$purple-xxlight: #f5f4fe;
+
+$pink-dark: #de266d;
+$pink: #fe3c87;
+$pink-light: #ff3c87;
+$pink-xlight: #ffe4ee;
+
+$green-dark: #36c7a6;
+$green: #33e2bb;
+$green-xlight: #d6fff6;
+
+$yellow-dark: #ddac3e;
+$yellow: #fad566;
+$yellow-light: #fff4d5;
+
+$grey-dark: #999999;
+$grey: #e8e8e8;
+
+$base-background: $white;
+$base-font-color: $blue-dark;
+$base-error-color: $pink;
+
+html,
+body,
+body input,
+body button,
+body select,
+body textarea {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+}
+
+/*
+  HeaderShine
+ */
+.d-header {
+  box-shadow: none;
+  background-color: white;
+  border-bottom: 1px solid $grey;
+}
+
+/*
+  FooterShine
+ */
+.FooterShine {
+  border-top: 1px solid $grey;
+  padding: 30px 6px 40px 2px;
+
+  ul {
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    height: 54px;
+
+    li:first-child {
+      margin-right: auto;
+    }
+
+    li:not(:first-child):not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  a,
+  a:visited {
+    color: $text-light;
+    font-size: 1em;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $tertiary;
+    }
+  }
+
+  img {
+    height: 54px;
+    margin-left: -10px;
+    opacity: 0.7;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  .SecondNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 6px 3px;
+    margin-right: -8px;
+
+    .Download-links {
+      .IconStore {
+        height: auto;
+        display: inline-block;
+        opacity: 0.8;
+
+        svg {
+          height: 37px;
+        }
+
+        &.-app-store {
+          opacity: 0.7;
+          margin-right: 10px;
+        }
+
+        &:hover,
+        &:focus {
+          opacity: 1;
+        }
+      }
+    }
+
+    .SocialLinks {
+      a {
+        opacity: 0.7;
+
+        &:hover,
+        &:active {
+          opacity: 1;
+        }
+      }
+
+      svg {
+        height: 30px;
+      }
+    }
+  }
+}
+
+/*
+  Shine Connect Button
+ */
+button.oauth2_basic {
+  background: white !important;
+  border-radius: 5px;
+  border: 1px solid $purple;
+  color: $purple;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+
+  &:before {
+    background-size: cover;
+    content: '';
+    background-image: url(https://community.shine.fr/uploads/shine/original/1X/d20db6cea68f9686bb50a40ae4556d9c80eb02a4.png);
+    height: 21px;
+    width: 20px;
+    background-repeat: no-repeat;
+    margin-right: 6px;
+  }
+
+  &:hover,
+  &:focus {
+    color: white !important;
+    background: $purple !important;
+  }
+}
+
+.topic-list-item.visited a.title:not(.badge-notification),
+.latest-topic-list-item.visited a.title:not(.badge-notification),
+.category-topic-link.visited a.title:not(.badge-notification) {
+  color: $primary;
+}
+
+.badge-wrapper.bullet .badge-category-bg {
+  display: none;
+}
+
+.category-name {
+  font-size: 1.1em;
+  font-weight: 400;
+  color: $text-light;
+}
+.badge-wrapper.bullet span.badge-category {
+  color: $text-light;
+}
+
+.badge-wrapper .badge-category .d-icon {
+  margin-right: 5px;
+}
+
+.suggested-topics-message .badge-wrapper.bullet {
+  margin-right: 0;
+}
+
+#suggested-topics {
+  padding: 30px 0;
+  .suggested-topics-message {
+    margin: 0.5rem 0;
+  }
+}
+
+#list-area {
+  margin-bottom: 80px;
+}
+
+.active i {
+  color: $blue-light;
+}
+
+.fa.tracking,
+.fa.watching {
+  color: $purple;
+  font-weight: normal;
+}
+
+tr.category-topic-link,
+.latest-topic-list-item,
+.table-heading {
+  border-color: $grey;
+}
+
+.moderator .topic-body {
+  background-color: $green-xlight;
+}
+
+.badge-category-parent-bg {
+  display: none !important;
+}
+
+a.mention,
+a.mention-group {
+  background: transparent;
+  color: $purple;
+}
+
+@media (max-width: 750px) {
+  footer {
+    .ProductNav {
+      li:not(:first-child) {
+        display: none;
+      }
+    }
+
+    .SecondNav {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 16px;
+
+      .DownloadLinks {
+        margin-left: 1px;
+      }
+
+      .SocialLinks {
+        margin-top: 20px;
+        margin-left: -8px;
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  #suggested-topics .category {
+    display: none;
+  }
+}

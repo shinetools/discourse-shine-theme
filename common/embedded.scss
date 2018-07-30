@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i');
+$media-query: 'only screen and';
+
+// Breakpoints
+$breakpoint-desktop: 1060px;
+$mobile: '#{$media-query} (max-width: #{$breakpoint-desktop})';
+
+// -------------------------
+// Colors
+// -------------------------
+$white: #fff;
+$black: #333;
+$red: #a22;
+
+$text-primary: #0e1554;
+$text-secondary: #3a4476;
+$text-light: #6a7299;
+$text-lighter: #9da1c3;
+
+$blue-xdark: #0a0f37;
+$blue-dark: #0e1554;
+$blue-sdark: #2c40bb;
+$blue: #445ae3;
+$blue-slight: #2a90cc;
+$blue-light: #51befe;
+$blue-xlight: #4eb7f5;
+$blue-xxlight: #d8f8ff;
+
+$purple: #545efc;
+$purple-light: #767efd;
+$purple-xlight: #dde2ff;
+$purple-xxlight: #f5f4fe;
+
+$pink-dark: #de266d;
+$pink: #fe3c87;
+$pink-light: #ff3c87;
+$pink-xlight: #ffe4ee;
+
+$green-dark: #36c7a6;
+$green: #33e2bb;
+$green-xlight: #d6fff6;
+
+$yellow-dark: #ddac3e;
+$yellow: #fad566;
+$yellow-light: #fff4d5;
+
+$grey-dark: #999999;
+$grey: #e8e8e8;
+
+$base-background: $white;
+$base-font-color: $blue-dark;
+$base-error-color: $pink;
+
+/* -----
+Font Weight
+----- */
+$regular: 300;
+$medium: 400;
+$bold: 500;
+
+@mixin mobile {
+  @media #{$mobile} {
+    @content;
+  }
+}
+
+.discourseComments {
+  font-family: Rubik, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: $text-primary;
+  font-weight: 300;
+
+  .logo {
+    display: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    width: auto !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  a,
+  .button.post-replies {
+    color: $blue;
+
+    &.staff {
+      background: transparent;
+    }
+    &:hover,
+    &:focus {
+      color: $blue-sdark;
+    }
+  }
+
+  ul {
+    list-style-type: initial;
+  }
+
+  ul,
+  ol {
+    margin-top: 16px;
+    margin-left: 30px;
+
+    > li {
+      line-height: 1.5;
+      font-size: 19px;
+      padding-bottom: 10px;
+
+      p {
+        margin-top: 0;
+      }
+
+      @include mobile {
+        font-size: 18px;
+        line-height: 1.58;
+      }
+    }
+  }
+
+  p {
+    font-size: 19px;
+    line-height: 1.68;
+    letter-spacing: 0.003em;
+
+    strong {
+      font-weight: $medium;
+    }
+
+    @include mobile {
+      font-size: 17px;
+      line-height: 1.5;
+    }
+  }
+
+  hr:before {
+    content: '...';
+    display: inline-block;
+    margin-left: 0.6em;
+    color: rgba(0, 0, 0, 0.68);
+    position: relative;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: 0.6em;
+  }
+
+  hr {
+    display: block;
+    border: 0;
+    text-align: center;
+    overflow: visible;
+    height: 20px;
+  }
+
+  .button {
+    font-size: 16px;
+    color: $white;
+    background-color: $purple;
+    position: relative;
+    max-height: 45px;
+    padding: 13px 28px 11px;
+    font-weight: 500;
+    border-radius: 22px;
+    overflow: hidden;
+    transition: background-color 300ms, color 300ms;
+
+    &:hover,
+    &:focus {
+      background-color: $blue-xlight;
+      color: $white;
+    }
+  }
+
+  .button.post-replies {
+    margin: 12px 0 8px;
+    padding: 0;
+    display: inline-block;
+    background-color: white;
+  }
+
+  footer {
+    display: flex;
+
+    .button {
+      margin: 10px auto;
+    }
+  }
+}
