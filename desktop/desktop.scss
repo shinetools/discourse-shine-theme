@@ -1,6 +1,8 @@
 // -------------------------
 // Colors
 // -------------------------
+@import 'common/foundation/variables';
+
 $white: #fff;
 $black: #333;
 $red: #a22;
@@ -23,6 +25,7 @@ $purple: #545efc;
 $purple-light: #767efd;
 $purple-xlight: #dde2ff;
 $purple-xxlight: #f5f4fe;
+$purple-fade: rgba($purple, 0.07);
 
 $pink-dark: #de266d;
 $pink: #fe3c87;
@@ -39,6 +42,7 @@ $yellow-light: #fff4d5;
 
 $grey-dark: #999999;
 $grey: #e8e8e8;
+$grey-light: #ececec;
 
 $base-background: $white;
 $base-font-color: $blue-dark;
@@ -482,14 +486,10 @@ td.category > div > h3 > a {
   }
 
   .category-logo {
-    width: 24px;
-    height: 24px;
+    width: 44px;
+    height: 44px;
     float: none;
     margin: 0;
-    padding: 10px;
-    border-radius: 50%;
-    background: $grey-light;
-    opacity: 0.8;
   }
 }
 
@@ -529,13 +529,10 @@ td.category > div > h3 > a {
   }
 
   img {
-    width: 30px;
-    height: 30px;
-    background: $grey-light;
-    border-radius: 50%;
-    padding: 10px;
+    width: 50px;
+    height: 50px;
     margin-bottom: 0;
-    margin-right: 1.2rem;
+    margin-right: 1.1rem;
   }
 }
 
