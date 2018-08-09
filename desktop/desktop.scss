@@ -608,3 +608,12 @@ td.category > div > h3 > a {
     font-size: 14px;
   }
 }
+
+@media (max-width: 650px) {
+  #suggested-topics .category,
+  #suggested-topics .posters,
+  .topic-list .category,
+  .topic-list .posters {
+    display: none;
+  }
+}
