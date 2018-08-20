@@ -463,6 +463,12 @@ td.category > div > h3 > a {
     tr:first-of-type {
       border-top-width: 1px;
     }
+
+    .category-title-link {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+    }
   }
 
   tr {
