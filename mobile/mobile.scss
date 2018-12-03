@@ -140,11 +140,17 @@ ol.category-breadcrumb {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+  margin-bottom: 4px;
 }
 
-.category-logo {
+.category-logo.aspect-image {
   max-height: 40px;
   margin-right: 0.5rem;
+
+  img {
+      width: 40px;
+      height: auto;
+  }
 }
 
 .categories-list .category-list th {
