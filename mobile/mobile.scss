@@ -144,6 +144,7 @@ ol.category-breadcrumb {
 }
 
 .category-logo.aspect-image {
+  --aspect-ratio: none !important;
   max-height: 40px;
   margin-right: 0.5rem;
 
