@@ -60,7 +60,6 @@ html {
   #site-logo {
     max-height: 32px;
     position: relative;
-    top: 6px;
   }
 }
 
@@ -110,9 +109,9 @@ ol.category-breadcrumb {
 }
 
 .list-controls
-  .category-breadcrumb
-  a.badge-category.category-dropdown-button:hover
-  .fa-caret-right {
+.category-breadcrumb
+a.badge-category.category-dropdown-button:hover
+.fa-caret-right {
   color: $black;
 }
 
@@ -373,6 +372,7 @@ ul {
     padding: 2px 8px;
     margin: 0;
   }
+
   span.badge-category-bg {
     border-radius: 2px;
   }
@@ -552,6 +552,7 @@ td.category > div > h3 > a {
     min-width: 320px;
   }
 }
+
 @media (max-width: 818px) {
   .column.categories {
     flex: auto;
@@ -565,6 +566,7 @@ td.category > div > h3 > a {
     display: none;
   }
 }
+
 @media (max-width: 760px) {
   .categories-and-latest div.column.categories {
     margin-right: 0;

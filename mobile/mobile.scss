@@ -1,4 +1,5 @@
 @import 'common/foundation/variables';
+
 // -------------------------
 // Colors
 // -------------------------
@@ -56,6 +57,7 @@ html {
   font-size: 16px;
   line-height: 1.5em;
 }
+
 /*
   Header
  */
@@ -72,6 +74,7 @@ html {
     margin: 5px 6px !important;
   }
 }
+
 /*
   Alert
  */
@@ -130,9 +133,9 @@ ol.category-breadcrumb {
 }
 
 .list-controls
-  .category-breadcrumb
-  a.badge-category.category-dropdown-button:hover
-  .fa-caret-right {
+.category-breadcrumb
+a.badge-category.category-dropdown-button:hover
+.fa-caret-right {
   color: $black;
 }
 
@@ -144,13 +147,13 @@ ol.category-breadcrumb {
 }
 
 .category-logo.aspect-image {
-  --aspect-ratio: none !important;
+  aspect-ratio: none !important;
   max-height: 40px;
   margin-right: 0.5rem;
 
   img {
-      width: 40px;
-      height: auto;
+    width: 40px;
+    height: auto;
   }
 }
 
